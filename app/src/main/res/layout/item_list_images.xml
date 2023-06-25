@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/card_picture"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:cardCornerRadius="8dp"
+        app:strokeWidth="1dp"
+        app:strokeColor="@color/white">
+
+    <ImageView
+            android:id="@+id/img_product"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/camiseta"
+            android:contentDescription="@null"
+            android:scaleType="fitXY"/>
+
+</com.google.android.material.card.MaterialCardView>

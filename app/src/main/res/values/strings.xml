@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">temaqui</string>
+    <string name="title_home">Início</string>
+    <string name="title_buy">Comprar</string>
+    <string name="title_notifications">Notificações</string>
+    <string name="title_profile">Perfil</string>
+    <string name="see_all">Ver tudo</string>
+
+    <string name="back_button_accessibility">voltar, botão</string>
+    <string name="cart_title_cart">Meu Carrinho</string>
+    <string name="cart_hint_coupon">Tem cupom?</string>
+    <string name="cart_button_apply_coupon">Aplicar</string>
+    <string name="cart_subtotal_title">Sub-total</string>
+    <string name="cart_coupon_title">Cupom</string>
+    <string name="cart_delivery_title">Frete</string>
+    <string name="cart_total_title">Total</string>
+    <string name="cart_finish_buy">Fechar pedido!</string>
+    <string name="cart_size">Tamanho: </string>
+    
+    <string name="personalize_title">Nossos Parceiros</string>
+    <string name="personalize_total_title">Total</string>
+    <string name="personalize_finish_personalization">Já Personalizei!</string>
+
+    <string name="details_reviews_title">Avaliações</string>
+    <string name="details_review_content">(%d)</string>
+    <string name="details_hyperlink">Vendido por <![CDATA[<a href="%s">%s</a>]]></string>
+    <string name="details_choose_size">Escolha o tamanho</string>
+    <string name="details_personalize">Personalizar!</string>
+    <string name="details_minus">-</string>
+    <string name="details_plus">+</string>
+    <string name="details_add">Adicionar</string>
+    
+    <string name="bottom_sheet_successfully_added">Adicionado com sucesso</string>
+    <string name="bottom_sheet_go_to_cart">ver carrinho</string>
+    <string name="bottom_sheet_keep_buying">continuar comprando</string>
+
+    <string name="buy_cart_button">Carrinho, botão</string>
+    <string name="buy_search_hint">Pesquise aqui!</string>
+    <string name="buy_category_title">Compre por categoria</string>
+    <string name="buy_recomendation_title">Recomendados para você</string>
+
+</resources>

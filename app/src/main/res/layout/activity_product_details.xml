@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:background="@color/main_background">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp">
+
+        <com.smarteist.autoimageslider.SliderView
+                android:id="@+id/slider_product"
+                android:layout_width="0dp"
+                android:layout_height="250dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:sliderIndicatorOrientation="horizontal"
+                app:sliderAutoCycleDirection="back_and_forth"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_list_images"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/item_list_images"
+                tools:itemCount="3"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintTop_toBottomOf="@id/slider_product"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp" />
+
+        <TextView
+                android:id="@+id/text_sold_by"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                tools:text="@string/details_hyperlink"
+                android:autoLink="web"
+                android:linksClickable="true"
+                android:textColor="@color/main_text_color"
+                app:layout_constraintTop_toBottomOf="@id/recycler_list_images"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"/>
+
+        <ImageView
+                android:id="@+id/icon_score"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_star_24"
+                app:layout_constraintTop_toBottomOf="@id/text_sold_by"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="12dp"
+                android:contentDescription="@null" />
+
+        <TextView
+                android:id="@+id/text_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="4.9"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/main_text_color"
+                app:layout_constraintTop_toTopOf="@id/icon_score"
+                app:layout_constraintBottom_toBottomOf="@id/icon_score"
+                app:layout_constraintStart_toEndOf="@id/icon_score"
+                android:layout_marginStart="8dp" />
+
+        <TextView
+                android:id="@+id/text_number_reviews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="(85)"
+                app:layout_constraintTop_toTopOf="@id/text_score"
+                app:layout_constraintBottom_toBottomOf="@id/text_score"
+                app:layout_constraintStart_toEndOf="@id/text_score"
+                android:layout_marginStart="8dp"/>
+
+        <TextView
+                android:id="@+id/text_reviews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/details_reviews_title"
+                android:textColor="@color/main_text_color"
+                app:layout_constraintTop_toTopOf="@id/icon_score"
+                app:layout_constraintBottom_toBottomOf="@id/icon_score"
+                app:layout_constraintStart_toEndOf="@id/text_number_reviews"
+                android:layout_marginStart="8dp"/>
+
+        <TextView
+                android:id="@+id/text_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                tools:text="Camiseta cinza"
+                android:textSize="18sp"
+                android:textColor="@color/main_text_color"
+                app:layout_constraintTop_toBottomOf="@id/icon_score"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"/>
+
+        <TextView
+                android:id="@+id/text_price"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                tools:text="R$ 99,99"
+                android:textColor="@color/main_text_color"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/text_name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"/>
+
+        <TextView
+                android:id="@+id/text_choose_size"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/details_choose_size"
+                android:textSize="18sp"
+                android:textColor="@color/main_text_color"
+                app:layout_constraintTop_toBottomOf="@id/text_price"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp" />
+
+        <RadioGroup
+                android:id="@+id/radio_size"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/text_choose_size"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp">
+
+
+        </RadioGroup>
+        
+        <Button
+                android:id="@+id/button_personalize"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/details_personalize"
+                android:textColor="@color/main_text_color"
+                android:backgroundTint="@color/details_personalize_button_background_color"
+                android:textAllCaps="false"
+                app:layout_constraintTop_toTopOf="@+id/radio_size"
+                app:layout_constraintBottom_toBottomOf="@+id/radio_size"
+                app:layout_constraintStart_toEndOf="@id/radio_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="32dp"/>
+
+        <androidx.cardview.widget.CardView
+                android:id="@+id/card_quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/details_personalize_quantity_background_color"
+                app:layout_constraintTop_toBottomOf="@id/radio_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:cardCornerRadius="8dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="32dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                <Button
+                        android:id="@+id/button_minus"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:text="@string/details_minus"
+                        android:textColor="@color/main_text_color"
+                        android:backgroundTint="@color/white"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="8dp"/>
+
+                <TextView
+                        android:id="@+id/text_quantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="1"
+                        android:textSize="18sp"
+                        android:textColor="@color/main_text_color"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/button_minus"
+                        android:layout_marginStart="16dp" />
+
+                <Button
+                        android:id="@+id/button_plus"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:text="@string/details_plus"
+                        android:textColor="@color/main_text_color"
+                        android:backgroundTint="@color/white"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/text_quantity"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="8dp"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <Button
+                android:id="@+id/button_add"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Adicionar"
+                android:textAllCaps="false"
+                app:layout_constraintTop_toTopOf="@id/card_quantity"
+                app:layout_constraintBottom_toBottomOf="@id/card_quantity"
+                app:layout_constraintStart_toEndOf="@id/card_quantity"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
