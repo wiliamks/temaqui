@@ -21,5 +21,7 @@ class DetailsRepositoryImpl : DetailsRepository {
                 )
             )
         }
+
+        Session.personalizationSelection = arrayListOf()
     }
 }

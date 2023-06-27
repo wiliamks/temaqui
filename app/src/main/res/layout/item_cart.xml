@@ -26,10 +26,11 @@
         
         <TextView
                 android:id="@+id/text_name"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 tools:text="Camiseta cinza"
                 android:textColor="@color/main_text_color"
+                android:maxLines="2"
                 app:layout_constraintTop_toTopOf="@id/img_content"
                 app:layout_constraintStart_toEndOf="@id/img_content"
                 android:layout_marginStart="16dp"/>
@@ -67,6 +68,7 @@
                 app:layout_constraintStart_toEndOf="@id/text_size_title"/>
 
         <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/card_quantity"
                 android:layout_width="wrap_content"
                 android:layout_height="45dp"
                 app:layout_constraintBottom_toBottomOf="parent"

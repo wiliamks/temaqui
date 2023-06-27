@@ -17,9 +17,15 @@
             android:label="@string/title_buy"
             tools:layout="@layout/fragment_buy" />
 
-    <activity
+    <fragment
             android:id="@+id/navigation_notifications"
-            android:name="com.wiliamks.temaqui.ui.detail.activity.DetailActivity"
+            android:name="com.wiliamks.temaqui.ui.notifications.NotificationsFragment"
+            android:label="@string/title_notifications"
+            tools:layout="@layout/fragment_notifications" />
+
+    <fragment
+            android:id="@+id/navigation_profile"
+            android:name="com.wiliamks.temaqui.ui.profile.fragment.ProfileFragment"
             android:label="@string/title_notifications"
             tools:layout="@layout/fragment_notifications" />
 </navigation>

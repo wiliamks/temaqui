@@ -69,19 +69,19 @@ class BuyViewModelTest : BaseTest() {
         private val listaCategorias = arrayListOf(
             Category(
                 name = "Popular",
-                picture = R.drawable.popular
+                picture = R.drawable.card_popular
             ),
             Category(
                 name = "Masculino",
-                picture = R.drawable.masculino
+                picture = R.drawable.card_masculino
             ),
             Category(
                 name = "Feminino",
-                picture = R.drawable.feminino
+                picture = R.drawable.card_feminino
             ),
             Category(
                 name = "Infantil",
-                picture = R.drawable.infantil
+                picture = R.drawable.card_infantil
             ),
         )
 

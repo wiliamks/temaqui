@@ -18,6 +18,7 @@ import com.wiliamks.temaqui.ui.buy.adapter.BuyCategoryAdapter
 import com.wiliamks.temaqui.ui.buy.adapter.BuyRecomendationAdapter
 import com.wiliamks.temaqui.ui.buy.repository.BuyRepositoryImpl
 import com.wiliamks.temaqui.ui.buy.viewmodel.BuyViewModel
+import com.wiliamks.temaqui.ui.cart.activity.CartActivity
 import com.wiliamks.temaqui.ui.detail.activity.DetailActivity
 
 
@@ -67,6 +68,16 @@ class BuyFragment : Fragment() {
             binding.recyclerCategory.addItemDecoration(BuyCategoryAdapter.HorizontalMarginItemDecoration)
         binding.recyclerCategory.adapter = BuyCategoryAdapter(listCategory) {
             Toast.makeText(context, it.name, Toast.LENGTH_SHORT).show()
+        }
+
+        binding.iconCart.setOnClickListener {
+            if (Session.cartSelection.isEmpty()) {
+                Toast.makeText(context, "Você não possui itens no carrinho", Toast.LENGTH_SHORT).show()
+            }
+            else {
+                val intent = Intent(context, CartActivity::class.java)
+                startActivity(intent)
+            }
         }
     }
 

@@ -44,11 +44,11 @@ class CartAdapter(
 
     inner class CartViewHolder(
         private val binding: ItemCartBinding,
-        callback: (CartItem) -> Unit
+        private val callback: (CartItem) -> Unit
     ) : RecyclerView.ViewHolder(binding.root) {
         fun bind(item: CartItem) {
             if (item.product != null ){
-                binding.imgContent.setImageResource(item.product.pictures[1])
+                binding.imgContent.setImageResource(item.product.pictures[0])
                 binding.textName.text = item.product.name
                 binding.textPrice.text = (item.product.price * item.amountSelected).toBRL()
                 binding.textSizeContent.text = item.size

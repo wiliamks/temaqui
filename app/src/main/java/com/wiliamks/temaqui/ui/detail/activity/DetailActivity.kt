@@ -71,6 +71,12 @@ class DetailActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        bottomSheetBindind.buttonGoShopping.setOnClickListener {
+            bottomSheetDialog.dismiss()
+
+            onBackPressed()
+        }
+
         bottomSheetDialog.setContentView(bottomSheetBindind.root)
         bottomSheetDialog.show()
     }

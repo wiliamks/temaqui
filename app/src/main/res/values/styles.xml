@@ -19,4 +19,9 @@
     <style name="RoundedButton">
         <item name="android:colorPrimary">#d9d9d9</item>
     </style>
+
+    <style name="CustomCheckbox" parent="@style/Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/rounded_checkbox</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
 </resources>

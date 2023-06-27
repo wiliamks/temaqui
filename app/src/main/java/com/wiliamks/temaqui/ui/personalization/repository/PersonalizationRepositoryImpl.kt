@@ -15,12 +15,12 @@ class PersonalizationRepositoryImpl : PersonalizationRepository {
             Partner(
                 name = "Dona Maria Costura Barras, cortes e ajustes.",
                 price = 20.0,
-                image = R.drawable.dona_maria
+                image = R.drawable.parceiro_dona_maria
             ),
             Partner(
                 name = "Stylos Ellite Customizaçoes em geral.",
                 price = 32.0,
-                image = R.drawable.styllos
+                image = R.drawable.parceiro_styllos
             )
         )
     }

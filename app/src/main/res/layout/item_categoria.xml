@@ -31,8 +31,7 @@
                     android:id="@+id/img_circle"
                     android:layout_height="match_parent"
                     android:layout_width="match_parent"
-                    tools:src="@drawable/feminino"
-                    android:scaleType="centerCrop"
+                    tools:src="@drawable/card_feminino"
                     android:contentDescription="@null" />
         </androidx.cardview.widget.CardView>
 
